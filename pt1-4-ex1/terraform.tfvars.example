@@ -1,0 +1,7 @@
+# Copia aquest fitxer com a terraform.tfvars i ajusta els valors.
+aws_region       = "us-east-1"
+project_name     = "pt1-4-ex1"
+instance_type    = "t3.micro"
+instance_count   = 2
+key_name         = "vockey"        # AWS Academy. Canvia'l si uses un altre key pair.
+allowed_ssh_cidr = "0.0.0.0/0"     # Recomanat restringir-ho a la teva IP.

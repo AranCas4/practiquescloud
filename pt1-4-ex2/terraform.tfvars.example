@@ -1,0 +1,15 @@
+# Copia aquest fitxer com a terraform.tfvars i ajusta els valors.
+aws_region          = "us-east-1"
+project_name        = "pt1-4-ex2"
+vpc_cidr            = "10.0.0.0/16"
+availability_zone   = "us-east-1a"
+instance_type       = "t3.micro"
+instances_per_subnet = 2
+key_name            = "vockey"      # AWS Academy. Canvia'l si uses un altre key pair.
+allowed_ssh_cidr    = "0.0.0.0/0"   # Recomanat restringir-ho a la teva IP.
+
+subnets = {
+  A = { cidr_block = "10.0.32.0/25" }
+  B = { cidr_block = "10.0.30.0/23" }
+  C = { cidr_block = "10.0.33.0/28" }
+}

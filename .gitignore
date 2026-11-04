@@ -1,0 +1,25 @@
+# Terraform
+.terraform/
+.terraform.tfstate.lock.info
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variables locals (poden contenir dades sensibles)
+*.tfvars
+!*.tfvars.example
+
+# Claus i credencials
+*.pem
+*.key
+.env
+.aws/
+
+# Planificació
+tfplan
+*.tfplan
+
+# Sistema
+.DS_Store
+Thumbs.db
