@@ -3,7 +3,8 @@
 Desplegament d'una xarxa bàsica a **AWS (`us-east-1`)** amb **Terraform**: una VPC amb
 dues subxarxes públiques en dues zones de disponibilitat, Internet Gateway, taula de
 rutes, grup de seguretat i dues instàncies EC2. Desplegament real fet el **18/11/2026**
-amb un compte d'AWS Academy Learner Lab.
+amb un compte d'AWS Academy Learner Lab. Un cop capturades les evidències, els
+recursos es van **destruir** amb `terraform destroy` el mateix dia.
 
 | Paràmetre | Valor |
 |---|---|
@@ -223,9 +224,13 @@ i security group `pt2-2-sg`.
 ssh -i labsuser.pem ec2-user@32.200.161.106   # ec2-a
 ssh -i labsuser.pem ec2-user@98.91.220.177    # ec2-b
 
-# Quan ja no calguin els recursos:
+# Destrucció real feta el 18/11/2026 (10 recursos eliminats):
 terraform destroy -auto-approve
 ```
+
+La destrucció va eliminar la VPC, les dues subxarxes, l'Internet Gateway, la taula de
+rutes i les seves associacions, el security group i les dues instàncies. Les captures
+d'aquest README es van fer abans de la destrucció i en conserven la verificació.
 
 Les credencials, `terraform.tfvars`, `tfplan` i `terraform.tfstate` **no es pugen** al
 repositori (estan exclosos a `.gitignore`).

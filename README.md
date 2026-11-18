@@ -146,16 +146,16 @@ Desplegament real a `us-east-1` (05/11/2026):
 |---|---|---|
 | Ex1 | 2 EC2 `t3.micro` + SG | `running`, `us-east-1a` |
 | Ex2 | 16 recursos (VPC, 3 subnets, IGW, RT, SG, 6 EC2) | 6/6 `running`, `us-east-1a` |
-| Pt2.2 | 10 recursos (VPC, 2 subnets, IGW, RT + 2 associacions, SG, 2 EC2) | 2/2 `running` (`ec2-a` a `us-east-1a`, `ec2-b` a `us-east-1b`), desplegat 18/11/2026 |
+| Pt2.2 | 10 recursos (VPC, 2 subnets, IGW, RT + 2 associacions, SG, 2 EC2) | 2/2 `running` verificades i destruïdes el 18/11/2026 |
 
 - Terraform `1.9.8` (Pt1.4) i `1.17.2` (Pt2.2)
 - Provider `hashicorp/aws` `5.100.0` (Pt1.4) i `~> 5.0` (Pt2.2)
 - Regió: `us-east-1`
 
-Un cop capturades les evidències, els recursos de **Pt1.4** es van **destruir** amb
-`terraform destroy` (05/11/2026) per no consumir crèdits del Learner Lab. Els recursos
-de **Pt2.2** es deixen desplegats per poder-los verificar en directe; per eliminar-los,
-executa `terraform destroy` dins de `pt2-2/`.
+Un cop capturades les evidències, tots els recursos es van **destruir** amb
+`terraform destroy` (Pt1.4 el 05/11/2026 i Pt2.2 el 18/11/2026) per no consumir
+crèdits del Learner Lab. Les captures dels README conserven la verificació del
+desplegament real.
 Els fitxers `terraform.tfstate` queden en local i no es pugen al repositori.
 
 ## Autor
